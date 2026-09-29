@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jean-Pierre Gallego Santillan</title>
+<meta name="description" content="Apprenti informaticien CFC (GIT), ancien électricien. Je cherche un stage en systèmes, réseaux et infrastructure entre Lausanne et Genève.">
+<meta property="og:title" content="Jean-Pierre Gallego Santillan – Apprenti informaticien CFC">
+<meta property="og:description" content="Ancien électricien, en apprentissage d'informaticien. Je cherche un stage en systèmes et réseaux (Lausanne–Genève). CV, projets, contact.">
+<meta property="og:image" content="https://jp-gallego.github.io/photo.jpg">
+<meta property="og:url" content="https://jp-gallego.github.io">
+<meta name="theme-color" content="#12243d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312243d'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='%23f59e0b' text-anchor='middle'%3EJP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6fa; --card:#ffffff; --ink:#12243d; --muted:#5b6b80; --line:#e3e8f0;
+  --brand:#12243d; --accent:#f59e0b; --accent-ink:#7a4a00; --accent-soft:#fff4e0;
+  --ok:#16a34a; --shadow:0 1px 2px rgba(18,36,61,.06),0 8px 24px rgba(18,36,61,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1624; --card:#132235; --ink:#e8eef6; --muted:#9fb0c4; --line:#22364f;
+    --brand:#e8eef6; --accent:#fbbf24; --accent-ink:#fbbf24; --accent-soft:#2a2414;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1624; --card:#132235; --ink:#e8eef6; --muted:#9fb0c4; --line:#22364f;
+  --brand:#e8eef6; --accent:#fbbf24; --accent-ink:#fbbf24; --accent-soft:#2a2414;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 48px}
+
+/* en-tête */
+.hero{background:#12243d;color:#fff;padding:36px 16px 72px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:28px;height:2px;
+  background:repeating-linear-gradient(90deg,#f59e0b 0 18px,transparent 18px 26px);opacity:.55}
+.hero small{display:block;letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:#9fb3cc}
+.photo{width:128px;height:128px;border-radius:50%;object-fit:cover;border:4px solid #fff;display:block;margin:0 auto 14px;background:#e2eaf5}
+h1{font-size:26px;line-height:1.2;margin:0 0 6px;font-weight:700}
+.role{margin:0;color:#cfdbea}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  padding:6px 12px;border-radius:999px;font-size:14px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25)}
+
+/* boutons */
+.actions{margin-top:-48px;display:grid;gap:10px;position:relative;z-index:1}
+.btn{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;text-decoration:none;background:var(--card);
+  border:1px solid var(--line);box-shadow:var(--shadow);font-weight:600;min-height:56px}
+.btn svg{flex:none;width:22px;height:22px}
+.btn span{flex:1}
+.btn em{font-style:normal;font-weight:400;color:var(--muted);font-size:13px}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#1c1300}
+.btn.main em{color:#4a3300}
+.btn:active{transform:scale(.99)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row .btn{justify-content:flex-start}
+
+.forum{margin:16px 0 0;background:var(--accent-soft);border:1px solid var(--accent);color:var(--ink);border-radius:14px;padding:12px 14px;font-size:14.5px;display:none}
+.forum b{color:var(--accent-ink)}
+
+section{margin-top:34px}
+h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.card p{margin:0 0 10px}.card p:last-child{margin:0}
+
+/* projets */
+.projects{display:grid;gap:10px}
+.proj{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.proj h3{margin:0 0 4px;font-size:16px;line-height:1.35}
+.proj p{margin:0;color:var(--muted);font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:12px;padding:3px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.proj .n{font-size:12px;font-weight:600;color:var(--accent-ink);text-transform:uppercase;letter-spacing:.05em}
+.more{display:inline-block;margin-top:12px;font-weight:600}
+
+/* parcours */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 18px 26px}
+.tl li::before{content:"";position:absolute;left:6px;top:8px;bottom:-8px;width:2px;background:var(--line)}
+.tl li:last-child::before{display:none}
+.tl li::after{content:"";position:absolute;left:1px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--accent)}
+.tl .when{font-size:13px;color:var(--muted)}
+.tl b{display:block}
+.tl p{margin:2px 0 0;font-size:14.5px;color:var(--muted)}
+
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:var(--card);border:1px solid var(--line);padding:6px 10px;border-radius:8px;font-size:14px}
+
+footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13.5px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="photo" src="photo.jpg" alt="Photo de Jean-Pierre Gallego Santillan" width="128" height="128">
+  <h1>Jean-Pierre Gallego Santillan</h1>
+  <p class="role">Apprenti informaticien CFC · ancien électricien</p>
+  <div class="status"><span class="dot"></span>Je cherche un stage · systèmes &amp; réseaux · Lausanne–Genève</div>
+</header>
+
+<main class="wrap">
+
+  <div class="actions">
+    <a class="btn main" href="cv-jean-pierre-gallego.pdf" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+      <span>Voir mon CV <br><em>PDF, 1 page</em></span>
+    </a>
+    <a class="btn" href="https://www.linkedin.com/in/jean-pierre-gallego-santillan-6b4701433" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      <span>LinkedIn <br><em>Mon parcours et mes actus</em></span>
+    </a>
+    <a class="btn" href="https://github.com/jp-gallego/Projet-cfc-informaticien" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+      <span>Mes projets sur GitHub <br><em>Rapports complets avec captures</em></span>
+    </a>
+    <div class="row">
+      <a class="btn" href="jean-pierre-gallego.vcf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        <span>Ajouter aux contacts</span>
+      </a>
+      <a class="btn" href="mailto:jean-pierre.gallego@git.swiss?subject=Stage%20-%20Jean-Pierre%20Gallego">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span>M'écrire</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="forum" id="forum">On s'est croisés au <b>Swiss IT Forum(s)</b> à Palexpo ? Merci d'avoir scanné mon QR code ! N'hésitez pas à m'écrire, je réponds rapidement.</p>
+
+  <section>
+    <h2>En bref</h2>
+    <div class="card">
+      <p>J'ai été électricien pendant 5 ans (CFC). Sur les chantiers, je tirais déjà du câble réseau CAT 6/7 et de la fibre, je raccordais des prises et des racks et je testais les liaisons.</p>
+      <p>Depuis septembre 2026, je suis en apprentissage d'informaticien CFC au Geneva Institute of Technology. Pour chaque projet, j'écris un rapport complet avec mes captures, mes commandes et aussi mes erreurs, pour que quelqu'un d'autre puisse refaire la procédure.</p>
+      <p><b>Ce que je cherche :</b> un stage en systèmes, réseaux et infrastructure, entre Lausanne et Genève.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mes projets</h2>
+    <div class="projects">
+      <a class="proj" href="https://github.com/jp-gallego/Projet-cfc-informaticien/tree/main/Reseau-GNS3-routage-DHCP" target="_blank" rel="noopener">
+        <div class="n">Réseau</div>
+        <h3>Deux routeurs Cisco, DHCP et routage sous GNS3</h3>
+        <p>Un exercice de cours que j'ai poussé plus loin : deux réseaux reliés, des pings de bout en bout, et les pannes que j'ai dû trouver.</p>
+        <div class="tags"><span class="tag">GNS3</span><span class="tag">Cisco IOS</span><span class="tag">DHCP</span><span class="tag">Wireshark</span></div>
+      </a>
+      <a class="proj" href="https://github.com/jp-gallego/Projet-cfc-informaticien/tree/main/Projet-5-Deploiement-image-systeme" target="_blank" rel="noopener">
+        <div class="n">Projet 5</div>
+        <h3>Déployer 10 postes identiques avec une image système</h3>
+        <p>Un poste modèle passé à Sysprep, puis capturé et copié avec Clonezilla. Environ deux fois plus rapide qu'à la main.</p>
+        <div class="tags"><span class="tag">Sysprep</span><span class="tag">Clonezilla</span><span class="tag">VMware</span></div>
+      </a>
+      <a class="proj" href="https://github.com/jp-gallego/Projet-cfc-informaticien/tree/main/Projet-4-Depannage-poste" target="_blank" rel="noopener">
+        <div class="n">Projet 4</div>
+        <h3>Dépannage : plus d'Internet après un mauvais pilote</h3>
+        <p>Reproduction de la panne, hypothèses, diagnostic et rapport d'intervention comme au support.</p>
+        <div class="tags"><span class="tag">Support</span><span class="tag">Pilotes</span><span class="tag">Diagnostic</span></div>
+      </a>
+      <a class="proj" href="https://github.com/jp-gallego/Projet-cfc-informaticien/tree/main/Projet-2-Poste-multi-utilisateurs" target="_blank" rel="noopener">
+        <div class="n">Projet 2</div>
+        <h3>Un PC partagé où personne ne voit les fichiers des autres</h3>
+        <p>Droits NTFS, verrouillage de session, politique de mots de passe, tests croisés entre comptes.</p>
+        <div class="tags"><span class="tag">NTFS</span><span class="tag">PowerShell</span><span class="tag">secpol</span></div>
+      </a>
+    </div>
+    <a class="more" href="https://github.com/jp-gallego/Projet-cfc-informaticien" target="_blank" rel="noopener">Voir tous les projets (6) →</a>
+  </section>
+
+  <section>
+    <h2>Parcours</h2>
+    <div class="card">
+      <ul class="tl">
+        <li><span class="when">Depuis sept. 2026</span><b>Apprentissage CFC informaticien</b><p>Geneva Institute of Technology (GIT)</p></li>
+        <li><span class="when">2020 – 2026</span><b>Monteur électricien</b><p>Delay SA, Swisspro SA, Maréchaux SA · câblage CAT 6/7 et fibre, prises et racks, tests de liaisons, responsable d'équipe</p></li>
+        <li><span class="when">2025</span><b>Service militaire</b><p>Soldat sanitaire, spécialisation transmission · systèmes de communication</p></li>
+        <li><span class="when">2017 – 2020</span><b>CFC d'électricien</b><p>Lausanne</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Outils et compétences</h2>
+    <div class="skills">
+      <span class="skill">Windows 10 / 11</span><span class="skill">PowerShell</span><span class="skill">VMware Workstation</span>
+      <span class="skill">GNS3</span><span class="skill">Cisco IOS</span><span class="skill">Adressage IP / DHCP</span>
+      <span class="skill">Wireshark</span><span class="skill">Sysprep &amp; Clonezilla</span><span class="skill">Droits NTFS</span>
+      <span class="skill">Câblage cuivre &amp; fibre</span><span class="skill">Racks &amp; baies</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Langues</h2>
+    <div class="card"><p>Français et espagnol (langues maternelles) · anglais</p></div>
+  </section>
+
+  <footer>
+    <p>Jean-Pierre Gallego Santillan · Lausanne<br>
+    <a href="mailto:jean-pierre.gallego@git.swiss">jean-pierre.gallego@git.swiss</a></p>
+  </footer>
+</main>
+
+<script>
+  // Message pour le Swiss IT Forum(s), affiché jusqu'à mi-octobre 2026
+  try {
+    if (new Date() < new Date('2026-10-15')) document.getElementById('forum').style.display = 'block';
+  } catch (e) {}
+</script>
+</body>
+</html>
